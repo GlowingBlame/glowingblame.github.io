@@ -6,7 +6,9 @@ function launch(){
 document.getElementById('browser').src=document.getElementById('url').value;
 }
 function go(n){
-  document.getElementById('browser').contentWindow.history.go(n);
+  let window=document.getElementById('browser').contentWindow;
+  window.history.go(n);
+  window.location.reload();
 }
 </script>
 <textarea id="url" style="display:block;width:90%;height:1rem;" rows="1" placeholder="URL"></textarea>
